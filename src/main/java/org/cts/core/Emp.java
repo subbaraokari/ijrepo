@@ -1,0 +1,42 @@
+package org.cts.core;
+
+public class Emp {
+	private int eno;
+	private String name;
+	private String address;
+	private Dept dept;
+	public Emp() {
+		// TODO Auto-generated constructor stub
+	}
+	public Emp(int eno, String name, String address) {
+		super();
+		this.eno = eno;
+		this.name = name;
+		this.address = address;
+	}
+	public int getEno() {
+		return eno;
+	}
+	public void setEno(int eno) {
+		this.eno = eno;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public Dept getDept() {
+		return dept;
+	}
+	public void setDept(Dept dept) {
+		this.dept = dept;
+	}
+	
+}

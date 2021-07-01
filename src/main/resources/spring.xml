@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<bean name="dept" class="org.cts.core.Dept">
+		<property name="dno" value="100"/>
+		<property name="dname" value="CSE"/>
+		<property name="loc" value="Chennai"/>
+	</bean>
+	<bean name="e" class="org.cts.core.Emp">
+		<property name="eno" value="1"/>
+		<property name="name" value="Suresh"/>
+		<property name="address" value="Chennai"/>
+		<property name="department" ref="dept"/>
+	</bean>
+</beans>
