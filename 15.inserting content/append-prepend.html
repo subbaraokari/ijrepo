@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Append - Prepend</title>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+.para1 {
+	color: #FF0000
+}
+</style>
+</head>
+<body>
+<ul>
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+  <li>List Item 4</li>
+  <li>List Item 5</li>
+</ul>
+<p id="para1">hello</p>
+<p class="para1">hello</p>
+<p id="para2">hello</p>
+<p class="para2">hello</p>
+<script type="text/javascript">
+//$("p").append(" World!");
+//$("p").prepend("World! ");
+//$("li").prepend("hi ");
+//$("li").append(" hi");
+//$("li:last").appendTo("li:first");
+$("li:last").prependTo("li:first");
+</script>
+</body>
+</html>

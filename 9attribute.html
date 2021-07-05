@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>attributes and parameters</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+//$("p[class]").css("border","solid 5px green");
+//$("p[id]").css("border","solid 5px green");
+//$("ul[id]").css("border","solid 5px green");
+//$("p[class=para2]").css("border","solid 5px green");
+//$("p[class^=pa]").css("border","solid 5px green");
+//$("li[class^=a]").css("border","solid 5px green");
+//$("p[class$=2]").css("border","solid 5px green");
+$("p[id$=1]").css("border","solid 5px green");
+});
+</script>
+<style type="text/css">
+.a {
+	color: Navy;
+}
+.b {
+	color: Maroon;
+}
+</style>
+</head>
+<body>
+<ul id="list1">
+  <li class="ab">item 1</li>
+  <li class="ab">item 2</li>
+  <li class="ba">item 3</li>
+  <li class="ba">item 4</li>
+</ul>
+<p class="para2">This is paragraph 1</p>
+<p>This is paragraph 2</p>
+<p class="para1">This is paragraph 3</p>
+<p id="para1">This is paragraph 4</p>
+<p id="pa" lang="en-us">This is paragraph 5</p>
+</body>
+</html>

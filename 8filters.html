@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>filters</title>
+<script type="text/javascript" src="jquery.js">
+</script>
+<script type="text/javascript">
+$("document").ready(function(){
+//$("p").css("border","solid 5px #ff0000");
+//$("p:first").css("border","dotted 5px #ff0000");
+//$("p:last").css("border","solid 5px #ff0000");
+//$("p:even").css("border","solid 5px #ff0000");
+//$("p:odd").css("border","solid 5px #ff0000");
+//$(".one:first").css("border","solid 5px #ff0000");
+//$("#one:last").css("border","solid 5px #ff0000");
+//$("p:gt(1)").css("border","solid 5px #ff0000");
+/*gt=greater than*/
+//$("p:lt(1)").css("border","solid 5px #ff0000");
+/*lt=less than*/
+//$("p:not(p:lt(1))").css("border","solid 5px #ff0000");
+$("p:not(p:eq(3))").css("border","solid 5px  #ff0000");
+/*index starts from 0 as usual*/
+});
+</script>
+</head>
+<body>
+<p class="one">welcome to jQuery filters</p>
+<p class="one">welcome to jQuery filters</p>
+<p id="two">welcome to jQuery filters</p>
+<p class="three">welcome to jQuery filters</p>
+<p id="one">welcome to jQuery filters</p>
+</body>
+</html>

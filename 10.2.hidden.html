@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>visible &amp; hidden elements (show and hide)</title>
+<style type="text/css">
+div {
+	width:70px;
+	height:40px;
+	background:#ff0000;
+	margin:5px;
+	float:left;
+}
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+	$("div:visible").hide(5000);
+	$("div:hidden").show(5000);
+});
+</script>
+</head>
+<body>
+<div></div>
+<div style="display:none;background-color:green;">Hider!</div>
+<div></div>
+<div style="display:none;background-color:green;">Hider!</div>
+<div></div>
+</body>
+</html>

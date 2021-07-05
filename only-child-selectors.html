@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+*{
+	margin: 0px;
+	padding: 0px;
+}
+div { width:70px; height:80px; margin:5px; float:left; background:#b9e; padding:10px; }
+
+</style>
+</head>
+<body>
+<div>
+    <button>Sibling!</button>
+    <button>Sibling!</button>
+  </div>
+
+  <div>
+    <button>Sibling!</button>
+  </div>
+  <div>
+    None
+  </div>
+
+  <div>  
+    <button>Sibling!</button>
+    <button>Sibling!</button>
+    <button>Sibling!</button>
+
+  </div>
+  <div>
+    <button>Sibling!</button>
+  </div>
+  <script type="text/javascript">
+  $("div button:only-child").text("alone").css("color","blue");
+  
+  
+  </script>
+
+</body>
+</html>

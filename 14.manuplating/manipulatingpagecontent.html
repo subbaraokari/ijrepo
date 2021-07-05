@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Manuplating page content</title>
+<script type="text/javascript" src="jquery.js">
+</script>
+</head>
+<body>
+<ul id="list1">
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+  <li>List Item 4</li>
+  <li>List Item 5</li>
+</ul>
+<p id="para1">welcome to manipulating page content id 1</p>
+<p id="para2">welcome to manipulating page content id 2</p>
+<p class="para1">welcome to manipulating page content class 1</p>
+<p class="para2">welcome to manipulating page content class 2</p>
+<script type="text/javascript">
+//$("#list1").css("color","red");
+//alert($("body").html());
+//$("#list1").html("<li>this is a new list item</li>").css("color","red");
+var newitem=$("<p>this is last paragraph</p>");
+$(".para1").html(newitem.html());
+$("p:last").text("this is last p");
+</script> 
+</body>
+</html>

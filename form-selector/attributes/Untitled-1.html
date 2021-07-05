@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.4.4.js"></script>
+<title>Attribute Contains Prefix Selector [name|=&quot;value&quot;]</title></head>
+<body>
+  
+  <a href="example.html" hreflang="en">Some text</a> 
+
+  <a href="example.html" hreflang="en-UK">Some other text</a>
+  
+<script>$('a[hreflang|="en"]').css('border','3px dotted green');
+//Selects elements that have the specified attribute with a value either equal to a given string or starting with that string followed by a hyphen (-).
+$('a[hreflang|="en-UK"]').css('border','3px dotted red');</script>
+
+</body>
+</html>

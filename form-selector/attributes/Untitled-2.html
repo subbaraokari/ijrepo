@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.4.4.js"></script>
+<title>Attribute Contains Selector [name*=&quot;value&quot;]</title></head>
+<body>
+  <input name="man-news" />
+  <input name="milkman" />
+  <input name="letterman2" />
+  <input name="newmilk" />
+<script>
+$('input[name*="man"]').val('has man in it!');
+//Selects elements that have the specified attribute with a value containing the a given substring.
+
+</script>
+
+</body>
+</html>

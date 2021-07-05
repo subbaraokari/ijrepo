@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>offset</title>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+</style>
+</head>
+<body>
+<p>paragraph</p>
+<script type="text/javascript">
+var p=$("p");
+var offset=p.offset();
+p.html('left : '+offset.left+', top :'+offset.top);
+</script>
+</body>
+</html>

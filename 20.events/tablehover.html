@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Table Hover</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $("#theList tr:even").addClass("stripe1");
+        $("#theList tr:odd").addClass("stripe2");
+        $("#theList tr").hover(
+            function() {
+                $(this).toggleClass("highlight");
+            },
+            function() {
+                $(this).toggleClass("highlight");
+            }
+        );
+    });
+</script>
+<style type="text/css">
+* {
+	border:0px;}
+th, td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #000000;
+}
+tr {
+	border: 1px solid gray;
+}
+td {
+	width: 200px;
+	padding: 3px;
+}
+th {
+	background-color: #D2E0E8;
+	color: #003366;
+}
+table {
+	border: 1pt solid gray;
+}
+.clickable {
+	cursor: pointer;
+}
+.stripe1 {
+	background-color: #ff0000;
+}
+.stripe2 {
+	background-color: #ffff00;
+}
+.highlight {
+	background-color: #ffcc00;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h1>Using jQuery to stripe and hover-highlight a table</h1>
+<table id="theList">
+  <tr>
+    <th>Item</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Milk</td>
+    <td>1.99</td>
+  </tr>
+  <tr>
+    <td>Eggs</td>
+    <td>2.29</td>
+  </tr>
+   <tr>
+    <td>Eggs</td>
+    <td>2.29</td>
+  </tr> <tr>
+    <td>Eggs</td>
+    <td>2.29</td>
+  </tr> <tr>
+    <td>Eggs</td>
+    <td>2.29</td>
+  </tr> <tr>
+    <td>Eggs</td>
+    <td>2.29</td>
+  </tr> <tr>
+    <td>Eggs</td>
+    <td>2.29</td>
+  </tr>
+</table>
+</body>
+</html>

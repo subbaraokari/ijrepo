@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>child filters with addClass and removeClass</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+$("ul li:last-child").hover(function () {
+              $(this).addClass("sored");
+              },function () {
+              $(this).removeClass("sored");
+            });
+});
+</script>
+<style type="text/css">
+.sored {
+	color: #F00;
+	font-weight: bolder;
+	cursor: ne-resize;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+  <li>item 4</li>
+</ul>
+</body>
+</html>

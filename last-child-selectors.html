@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+.strike {
+	text-decoration: line-through;
+}
+;
+</style>
+</head>
+<body>
+<div> <span>span item 1</span><span>span item 1</span><span>span item 1</span> </div>
+<div> <span>span item 1</span><span>span item 1</span><span>span item 1</span> </div>
+<div> <span>span item 1</span><span>span item 1</span><span>span item 1</span> </div>
+<script type="text/javascript">
+$("div span:last-child").css("color","red").hover(function(){$(this).addClass("strike");},function(){$(this).removeClass("strike");});
+</script>
+</body>
+</html>

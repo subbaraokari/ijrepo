@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>form selectors</title>
+<script type="text/javascript" src="jquery.js">
+</script>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.color {
+	background-color: #FF00FF;
+}
+#color {
+	background-color: #FF0000;
+}
+</style>
+</head>
+<body>
+<form action="user.php" method="post" enctype="multipart/form-data" name="frm" target="_blank">
+  <table width="438">
+    <tr>
+      <td width="122">first name</td>
+      <td width="4">:</td>
+      <td colspan="4"><input type="text" name="first name" id="color" size="35" placeholder="dgdfgfgdh" ></td>
+    </tr>
+    <tr>
+      <td>middle name</td>
+      <td>:</td>
+      <td colspan="4"><input type="text" name="middle name" id="color" size="35"></td>
+    </tr>
+    <tr>
+      <td>last name</td>
+      <td>:</td>
+      <td colspan="4"><input type="text" name="last name" id="color" size="35" disabled="true"></td>
+    </tr>
+    <tr>
+      <td>password</td>
+      <td>:</td>
+      <td colspan="3"><input type="password" name="password" id="color" size="35"></td>
+    </tr>
+    <tr>
+      <td>date of birth</td>
+      <td>:</td>
+      <td><select id="color" name="month">
+          <option value="na">Month</option>
+        </select></td>
+      <td><select name="day" id="day" class="color">
+          <option value="na">Day</option>
+        </select></td>
+      <td width="113"><select name="year" id="color" multiple size="6">
+          <option value="na">Year</option>
+          <option value="2009">2009</option>
+          <option value="2009">2009</option><option value="2009">2009</option><option value="2009">2009</option><option value="2009">2009</option><option value="2009">2009</option><option value="2009">2009</option><option value="2009">2009</option><option value="2009">2009</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td>hidden</td>
+      <td>:</td>
+      <td colspan="4"><input type="hidden" name="hidden" id="color"></td>
+    </tr>
+    <tr>
+      <td>gender</td>
+      <td>:</td>
+      <td colspan="4"><input type="radio" name="gender" value="male" id="color" checked="true">
+        male
+        <input type="radio" name="gender" value="female" id="color">
+        female</td>
+    </tr>
+    <tr>
+      <td><label for="address">address</label></td>
+      <td>:</td>
+      <td colspan="4"><textarea name="address" style="resize:none" cols="25" rows="7"></textarea></td>
+    </tr>
+    <tr>
+      <td>hobbies</td>
+      <td>:</td>
+      <td width="111"><input type="checkbox" name="hobbies" value="movies" checked="checked" id="color">
+        movies<br>
+        <input type="checkbox" name="hobbies" value="games" id="color">
+        games</td>
+      <td width="64"><p>
+          <input type="checkbox" name="hobbies" value="sports" id="color">
+          sports <br>
+          <input type="checkbox" name="hobbies" value="books" id="color">
+          books</p></td>
+    </tr>
+    <tr>
+      <td colspan="4"><center>
+          <input name="image" type="image" src="submit.png" id="color" value="image">
+        </center></td>
+    </tr>
+    <tr>
+      <td colspan="4"><center>
+          <input type="file" value="file" id="color" name="file" multiple>
+        </center></td>
+    </tr>
+    <tr>
+      <td colspan="4"><center>
+          <input type="submit" value="submit" id="color" name="submit">
+        </center></td>
+    </tr>
+    <tr>
+      <td colspan="4"><center>
+          <input type="reset" value="reset" id="color" name="reset">
+        </center></td>
+    </tr>
+    <tr>
+      <td colspan="4"><center>
+          <input type="button" value="button" id="color" name="button">
+        </center></td>
+    </tr>
+  </table>
+</form>
+<script type="text/javascript">
+//$(":input").css("border","3px solid green");
+//$(":text").css("border","3px solid green").val("enabled");
+$(":password").css("border","3px solid green");
+//$("form input:radio").css("border","3px green solid");
+//radio works only in IE
+$(":checkbox").css("border","3px  solid green");
+//$(":image").css("border","3px solid green");
+//$(":file").css("border","3px solid green");
+//$(":submit").css("border","3px solid green");
+//$(":reset").css("border","3px solid green");
+//$(":button").css("border","3px solid green");
+//$(":text:disabled").css("border","3px solid green").val("this is it");
+//$(":text:enabled").css("border","3px solid green");
+//$(":checked:radio").css("border","3px solid green");
+//$(":checked").css("border","3px solid green");
+//$(":checked:checkbox").css("border","3px solid green");
+</script>
+</body>
+</html>

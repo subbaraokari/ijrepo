@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>content and child filters</title>
+<script type="text/javascript" src="jquery.js">
+</script>
+<script type="text/javascript">
+$("document").ready(function(){
+//$("p:contains(we)").css("border","solid 5px green");
+//$("p:contains(2),li:contains(2)").css("border","solid 5px red");
+//$("ul:has(li[id=b])").css("border","solid 5px yellow");
+//$("p:has(span[class=f])").css("border","solid 5px yellow");
+//$("ul:parent").css("border","solid 5px red");
+$("p:parent").css("border","solid 5px yellow");
+});
+</script>
+<style type="text/css">
+body {
+	background-color: pink;
+}
+</style>
+</head>
+<body>
+<ul id="list1">
+  <li class="a">List Item 1</li>
+  <li class="b">List Item 2</li>
+  <li class="c">List Item 3</li>
+  <li id="a">List Item 4</li>
+  <li id="b">List Item 5</li>
+</ul>
+<p class="para1">By using jQuery we can <span class="f">create</span> highly responsive web pages</p>
+<p class="para2">By using jQuery we can create highly responsive web pages</p>
+<p class="para3">By using jQuery can create highly responsive  pages 2</p>
+<h1>this is heading 1</h1>
+</body>
+</html>

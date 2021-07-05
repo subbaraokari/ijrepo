@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>Annotations</title>
+<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+<p><a href="basic.html">link 1</a></p>
+<p><a href="basic.pdf">link 2</a></p>
+<script type="text/javascript">
+$("a[href$=pdf]").after("<img src='adobe.png' align='absbottom'>");
+$("a[href$=html]").after("<img src='html.png' align='absbottom'>");
+</script>
+</body>
+</html>

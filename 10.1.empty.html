@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>content filters (empty)</title>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+td {
+	text-align: center;
+}
+</style>
+<script type="text/javascript">
+$("document").ready(function()
+{	
+	$("td:empty").text("Was empty!").css("background","green");
+	$("p:empty").text("empty!").css("color","#ff0000");
+});
+</script>
+</head>
+<body>
+<table border="1">
+  <tr>
+    <td>table 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>table 2</td>
+    <td></td>
+  </tr>
+</table>
+<p></p>
+</body>
+</html>

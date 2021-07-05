@@ -1,0 +1,77 @@
+<!Doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.box1 {
+	height: 100px;
+	width: 100px;
+	float: left;
+}
+.box2 {
+	height: 100px;
+	width: 100px;
+	float: left;
+}
+.box3 {
+	height: 100px;
+	width: 100px;
+	float: left;
+}
+.box1 ul {
+	list-style-position: inside;
+}
+
+.box2 ul {
+	list-style-position: inside;
+}
+.box3 ul {
+	list-style-position: inside;
+}
+span{ color:red; font-weight:bolder;
+
+}
+</style>
+</head>
+<body>
+<div class="box1">
+  <ul>
+    <li>list item 1</li>
+    <li>list item 2</li>
+    <li>list item 3</li>
+    <li>list item 4</li>
+    <li>list item 5</li>
+  </ul>
+</div>
+<div class="box2">
+  <ul>
+    <li>list item 1</li>
+    <li>list item 2</li>
+    <li>list item 3</li>
+    <li>list item 4</li>
+    <li>list item 5</li>
+  </ul>
+</div>
+<div class="box3">
+  <ul>
+    <li>list item 1</li>
+    <li>list item 2</li>
+    <li>list item 3</li>
+    <li>list item 4</li>
+    <li>list item 5</li>
+  </ul>
+</div>
+<script type="text/javascript">
+$("ul li:nth-child(2)").append("<span>2nd!</span>");
+</script>
+<script type="text/javascript">
+$("ul li:nth-child(3)").append("<span>3rd!</span>");
+</script>
+</body>
+</html>

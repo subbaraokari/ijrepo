@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>show and hide by click event</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+    $("document").ready(function(){
+		$("#hide").click(function(){
+			$(".hidden").hide("fast");
+		});
+    $("#show").click(function(){
+      $(".hidden").show(2000);
+});
+    });
+</script>
+<style>
+div {
+	width: 50px;
+	height: 40px;
+	margin: 5px;
+	border: 10px ridge green;
+	float: left;
+}
+</style>
+</head>
+<body>
+<div></div>
+<div style="display:none;" class="hidden"></div>
+<div></div>
+<div></div>
+<div style="display:none;" class="hidden"></div>
+<br>
+<br>
+<button id="show">Show</button>
+<button id="hide">Hide</button>
+</body>
+</html>

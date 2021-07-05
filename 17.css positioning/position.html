@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+div {
+	padding: 15px;
+	background-color: #C6C;
+}
+p {
+	margin-left: 10px;
+}
+</style>
+<script src="jquery.js" type="text/javascript"></script>
+</head>
+<body>
+<div>
+  <p>Hello</p>
+</div>
+<p></p>
+<script type="text/javascript">
+var position = $("p:first").position();
+$("p:last").text( "left: " + position.left + ", top: " + position.top );
+//.offset() uses the entire window, whereas .position() uses the parent
+</script>
+</body>
+</html>

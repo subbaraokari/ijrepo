@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+button {
+	display:block;
+	font-size: 16px;
+	width: 150px;
+}
+div {
+	float: left;
+	border: thin groove #FF0000;
+	margin-left: 10px;
+}
+span {
+	color: #0000FF;
+	font-size: 36px;
+	margin-left: 10px;
+}
+#inner {
+	color: #FF0000;
+}
+td {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<div>
+  <button>:nth-child(even)</button>
+  <button>:nth-child(odd)</button>
+  <button>:nth-child(3n)</button>
+  <button>:nth-child(2)</button>
+</div>
+<div>
+  <button>:nth-child(3n+1)</button>
+  <button>:nth-child(3n+2)</button>
+  <button>:even</button>
+  <button>:odd</button>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>John</td>
+    </tr>
+    <tr>
+      <td>Karl</td>
+    </tr>
+    <tr>
+      <td>Brandon</td>
+    </tr>
+    <tr>
+      <td>Benjamin</td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>Sam</td>
+    </tr>
+  </table>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>Glen</td>
+    </tr>
+    <tr>
+      <td>Tane</td>
+    </tr>
+    <tr>
+      <td>Ralph</td>
+    </tr>
+    <tr>
+      <td>David</td>
+    </tr>
+    <tr>
+      <td>Mike</td>
+    </tr>
+    <tr>
+      <td>Dan</td>
+    </tr>
+  </table>
+</div>
+<span> tr<span id="inner"></span> </span> 
+<script type="text/javascript">
+  $("button").click(function(){
+  var str=$(this).text();
+  
+  $("tr" + str).css("background","red");
+  $("#inner").text(str);
+ } );
+  </script>
+</body>
+</html>

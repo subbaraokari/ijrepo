@@ -1,0 +1,13 @@
+The data-role element specifies which DIV/block should be used for the header, footer and content, all of which are inside the main page wrapper. Here are the data attributes used in this example:
+
+data-role – specifies the nature of the wrapper element, can be set to: page, header, content, footer. Two other settings were used in the example to indicate list elements and list dividers, for which the attribute was set to: listview for the main list element and list-divider for the list divider. There are a few other available settings, including collapsible, which creates a collapsible/show-hide block (more info).
+
+data-position – specifies whether the element should be fixed, in which case it will render at the top (for header) or bottom (for footer)
+
+data-inset – specifies whether element should be within content margins or outside of it (flush or with margin) – set to true or false
+
+data-transition – specifies which transition to use when loading new pages, can be set to: slide, slideup, slidedown, pop, flip or fade
+
+data-theme – specifies which design theme to use for elements within container, can be set to: a, b, c, d, e
+
+data-dividertheme – specifies the theme for the list dividers using same options as data-theme

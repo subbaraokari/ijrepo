@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>basic jquery selectors (similar to css)</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+//$("p").css("border","5px dotted #ff0000");
+//$("#list1").css("border","3px solid #ff0000");
+//$(".a").css("border","3px solid #ff0000");
+//$("p.a").css("border","3px solid #ff0000"); 
+//$("p.b").css("border","3px solid #ff0000");
+//$("li.a").css("border","3px solid #ff0000");
+$("li.b").css("border","3px solid #ff0000");
+});
+</script>
+<style type="text/css">
+.a {
+	color: Navy;
+}
+.b {
+	color: Maroon;
+}
+</style>
+</head>
+<body>
+<ul id="list1">
+  <li class="a">item 1</li>
+  <li class="a">item 2</li>
+  <li class="b">item 3</li>
+  <li class="b">item 4</li>
+</ul>
+<p class="a">This is paragraph 1</p>
+<p>This is paragraph 2</p>
+<p class="b">This is paragraph 3</p>
+<p>This is paragraph 4</p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+<title>Attribute Contains Word Selector [name~=&quot;value&quot;]</title></head>
+<body>
+  <input name="man - news" />
+  <input name="milk man" />
+  <input name="letterman2" />
+  <input name="newmilk" />
+<script>
+$('input[name~="man"]').val('has man in it!');
+//Selects elements that have the specified attribute with a value containing a given word, delimited by spaces.
+
+</script>
+
+</body>
+</html>

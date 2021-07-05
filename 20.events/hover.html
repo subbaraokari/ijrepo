@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<div class="adad">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Hover</title>
+<script type="text/javascript" src="jquery.js"></script>
+<!--<script type="text/javascript">
+$(function(){
+$(".mydiv").hover(highlight,highlight);
+});
+function highlight(evt){
+$(".mydiv").toggleClass("highlighted");
+}
+</script>-->
+<script type="text/javascript">
+$(function(){
+$(".mydiv").hover(highlight,highlight1);
+$(".mydiv").toggle(fnclick1,fnclick2);
+});
+function highlight(evt){$(".mydiv").toggleClass("highlighted")};
+function highlight1(evt){$(".mydiv").toggleClass("highlighted1");
+}
+function fnclick1(evt){
+$(".mydiv").html("Click!");
+}
+function fnclick2(evt){
+$(".mydiv").html("Clack!");
+}
+</script>
+<style type="text/css">
+.mydiv {
+	width: 200px;
+	height: 140px;
+	background-color: #FF00FF;
+	padding: 10px;
+}
+.highlighted {
+	background-color: red;
+}
+.highlighted1 {
+	background-color: yellow;
+}
+</style>
+</head>
+<body>
+<div class="mydiv">Place the cursor on the div to see the action</div>
+</body>
+</html>

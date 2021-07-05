@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Wrap</title>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+div {
+	color: #FF0000;
+	background-color: #999999;
+	border: thick #0000FF solid;
+}
+p {
+	margin-left: 100px;
+}
+</style>
+</head>
+<body>
+<p>hello world!</p>
+<p>hello world!</p>
+<p>hello world!</p>
+<script type="text/javascript">
+//$("p").wrap("<div></div>");
+//$("p").wrap("<div style='color:red;background-color:green;'></div>");
+//$("p").wrapAll("<div style='color:red;background-color:green;'></div>");
+//$("p").wrapInner("<div></div>");
+//$("p").wrap("<div><div></div></div>");
+//$("p").wrap("<div><div><div><p></p></div></div></div>");
+$("p").replaceWith("hello M.r.perfect!<br>");
+</script>
+</body>
+</html>

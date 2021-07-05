@@ -1,0 +1,27 @@
+<html>
+<head>
+<style type="text/css">
+span {
+	color:#008;
+}
+.sogreen {
+	color:green;
+	font-weight: bolder;
+	}
+</style>
+<script src="jquery.js" type="text/javascript"></script>
+</head>
+<body>
+<div> <span>John,</span> <span>Karl,</span> <span>Brandon</span> </div>
+<div> <span>Glen,</span> <span>Tane,</span> <span>Ralph</span> </div>
+<script type="text/javascript">
+    $("div span:first-child")
+        .css("text-decoration", "underline")
+        .hover(function () {
+              $(this).addClass("sogreen");
+            }, function () {
+              $(this).removeClass("sogreen");
+            });
+</script>
+</body>
+</html>

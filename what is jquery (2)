@@ -1,0 +1,351 @@
+jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.
+
+JQuery download (http://jquery.com/)
+	Examples of JQuery Websites : 
+		1.Google also using JQ(www.google.com).
+		2.Entertainment Arts uses JQ(www.ea.com).
+		3.wordpress(wordpress.org)
+		4.twitter(http://twitter.com)
+
+
+what is JQuery
+
+1.JQuery is a free available, opensource javascript library.
+2.JQuery is used in creating highly responsive web pages.
+3.works across all modern browsers.
+4.abstracts away browser-specific features,allowing you to concentrate on design.
+5.JQuery focuses on simplifying common scripting tasks
+(i).getting and manipulating page content.(DOM:document object model).
+(ii).working with modern browser event model(key task).
+(iii).adding sophisticated transition effects like fading,animation etc.
+2.Javascript has become essential to current web page development, but.., Javascript is not  a good language design
+4.Javascript has become bloated
+(i).DOM navigation
+(ii).Browser differences
+5.Writing Javascript code is tedious, time-consuming, and error-prone
+6.jQuery makes writing Javascript much easier
+(i).DOM navigation (css-like syntax)
+(ii).Apply methods to sets of DOM elements
+(iii).Builder model (chain method calls)
+(iv).Extensible and there are tons of libraries
+(v).Handles most browser differences so you don’t have to
+
+
+
+
+BASIC JQuery SELECTORS (similar to Cascading Style Sheets)
+
+SELECTOR				PURPOSE
+Tag Name				Finds All Elements That Are Named Tag Name
+#identifier				Finds All Elements with ID of identifier
+.classname				Finds All Elements that have class attribute with the value of classname
+tag.classname			Gets elements of type tag that have a class attribute with the value of a class name
+tag#id.classname			Retrieves the tag element that has an ID of id and a class attribute with the value 						 of class name
+*					Finds all elements in the page
+
+
+JQuery Vs DOM(Java Script)
+
+<html>								Get All <p> tags by using DOM : 
+<head>							 	document.getElementsByTagName("p");
+<title>Document</title>						Get All <p> tags by using jQuery :			
+<script type="text/javascript" src="jquery.js">		 $("p");
+</script>								Get the tag with id "list1" (DOM) : 
+<script type="text/javascript">				 document.getElementById("list1");
+    $("document").ready(function() {			Get the tag with id "list1" (jQuery) : 
+    });							 	 $("#list1");
+</script>								Get All <li> tags with class "a" (jQuery) :
+<style type="text/css">					 	 $("li.a"); or $(ul.a);
+.a { color: Navy; }
+.b { color: Maroon; }
+</style>
+</head>
+<body>
+	<ul id="list1">
+		<li class="a">item 1</li>
+		<li class="a">item 2</li>
+		<li class="b">item 3</li>
+		<li class="b">item 4</li>
+	</ul>
+<p class="a">This is paragraph 1</p>
+<p>This is paragraph 2</p>
+<p class="b">This is paragraph 3</p>
+<p>This is paragraph 4</p>
+</body>
+</html>
+
+
+
+The hierarchy and combination selectors allow you to get a little more advanced in selecting page content
+you can select elements based on hierarchical relationships or on a series of common criteria
+
+
+SELECTOR					PURPOSE
+Selector, Selector....			Finds all of the specified selectors
+.class1.class2				Finds all elements with both .class1 and .class2 applied
+parent>child				Finds all child elements that direct children of elements of type parent
+anscestor descendant			Finds all descendant elements that are contained within elements of type anscestor
+prev + next					Finds all next elements that are next to a previous elements
+prev ~ siblings				Finds all sibling elements that come after prev and match siblings selector
+
+
+JQuery FILTERS
+
+Filters work with selectors to provide even more fine-grained control over how elements are selected in the document like position or index.
+
+FILTER					PURPOSE
+:first					Selects only the first instance of the selector's returned set
+:last						Selects only the first instance of the selector's returned set
+:even						Selects only the even-numbered elements in the selector's returned set
+:odd						Selects only the odd-numbered elements in the selector's returned set
+:eq(n)					Filters out elements that are not positioned at the given index
+:lt(n)					Includes elements that are past the given index
+:gt(n)					Includes elements that are before the given index
+:header					Selects all header elements(h1,h2,h3 etc.)
+:animated					Selects all elements that are currently being animated in same way
+:not(selector)				Includes elements that do not match the given selector
+
+jQuery ATTRIBUTES
+
+You can filter the results of a selector statement based on attribute content 
+
+
+FILTER					PURPOSE
+[attribute]					Includes elements in the result set if they have the specified attribute
+[attribute=value]				Includes elements in the result set if they have the specified attribute and it has 						 the given value
+[attribute!=value]			Includes elements in the result set only if they have the specified attribute and 						 it doesn't have the given value
+[attribute^=value]			Includes elements that have the specified attribute and it starts with the 						 specified value
+[attribute$=value]			Includes elements that have the specified attribute and it ends with the specified 						 value
+[attribute*=value]			Includes elements that have the specified attribute and it contains the specified 						 value
+[attrFilter1][attrFilterN]		Includes elements that match all of the specified attribute filters
+
+
+
+CONTENT AND VISIBILITY FILTERS
+
+
+You can examine the content of selected elements or their visibility property to determine whether they should be included or excluded from the final set
+
+
+CONTENT FILTER 				PURPOSE
+:contains(text)				Filters the selection to only include elements that contains the text string
+:empty					Filters the selection to only include empty elements
+:has(selector)				Matches elements that contains atleast one element that has the specified selector
+:parent					Matches all elements that are parents(i.e. they contain atleast one other 						 element,including text)
+
+VISIBILITY SELECTORS			PURPOSE
+:visible					Filters the selection to only include visible elements 
+:hidden					Filters the selection to only include hidden elements
+
+
+CHILD FILTERS
+
+FILTER					PURPOSE
+:nth-child(index)				Matches elements at index, or even or odd imcrements, or who match an equation 
+:nth-child(even)                     of the form Xn+M (for example, 2n or 3n+1)
+:nth-child(odd)
+:nth-child(equation)
+:first-child				Matches elements who are the first child of their parent
+:last-child					Matches elements who are the last child of their parent
+:only-child					Matches elements who are the only child of their parent
+
+FORM FILTERS
+
+you can use form selectors to deal with Form elements
+They work like other selectors but start with a colon(:) like a regular filter
+
+SELECTOR					PURPOSE
+:input					Finds all input,select,textarea,and button elements
+:text						Finds all text elements
+:password					Finds all password elements
+:radio					Finds all radio button elements
+:checkbox					Finds all checkbox elements
+:submit					Finds all submit elements
+:reset					Finds all reset elements
+:button					Finds all button elements
+:image					Finds all image elements
+:file						Finds all file upload elements
+
+you can also perform additional filtering of form elements,such as whether items are checked,selected,or enabled
+
+SELECTOR					PURPOSE
+:enabled					Matches all form elements that are enabled
+:disabled					Matches all form elements that are disabled
+:checked					Matches all form elements that are checked(radio buttons and checkboxes)
+:selected					Matches all form elements that are selected
+
+
+TRAVERSING DOCUMENT INFORMATION
+
+You can traverse the information returned from a document easily
+
+FUNCTION/PROPERTY				PURPOSE
+size().length				The number of elements in the jQuery result set
+get()						Returns an array of all matched DOM elements.Useful if you need to operate on the 						 DOM elements themselves instead of using built-in jQuery functions 
+get(index)					Access a single matched DOM element at a specified index in the matched set
+find(expression)				Searches for descendant elements that match the specified expression
+each(fn)					Execute a function with in the context of every matched element
+
+
+
+MANIPULATING PAGE CONTENT 
+
+
+MANIPULATING CONTENT : Overview
+
+Once you have used selectors and filters to retrieve web page content,you usually want to do something with it
+
+Some times you want to create new content to dynamically add into the page
+
+jQuery has functions for creating,copying,deleting,and moving content around,as well as wrapping page content in other content
+
+jQuery provides cross-browser support for working with css ,including positioning and sizing information
+
+
+CREATING, SETTING and GETTING Content
+
+To create new HTML element,you simply pass a string containing new HTML to the $() function:
+	
+	var mystr=$("<h1>this is a HTML element</h1>");
+	var mystr="<h1>this is a HTML element</h1>";
+	var newelement=$(mystr);
+
+In addition to this method,you can use the html() and text() methods to get and set content on
+
+FUNCTION 					PURPOSE
+html()					Returns the HTML content of the first matched element
+html(newcontent)				Sets the HTML content of every matched element
+text()					Returns the text content of the first matched element				
+text(newtext)				Sets the text content for all matched elements
+
+
+MANIPULATING ATTRIBUTES
+
+To inspect or change the value of attribute on elements, use jQuery's attr functions
+
+FUNCTION					PURPOSE
+attr(name)					Accesses property on the first matched element.This method makes it easy to 						 retrieve a property value from the first matched element.If the element doesn't 						 have an attribute with such a name,undefined is returned 
+attr(properties) 				Sets a series of attributes on all matched elements using an object notation 						 syntax.This is the best used for setting large numbers of properties at once
+attr(key,value)	 			Sets a single property to a value on all matched elements
+attr(key,fn) 				Sets a single property a computed value,on all matched elements.Instead of 						 supplying a string value,a function is provided that computes the value of the 					 attribute 
+removeAttr(name)				Removes the named attribute from all the matched elements 
+
+
+INSERTING CONTENT
+
+jQuery provides several functions for inserting content in the document,both before and after existing page elements
+
+FUNCTION 					PURPOSE
+append(content) 				Appends content to the inside of every matched element 
+appendTo(selector)			Appends all of the matched elements to another,specified set of elements
+prepend(content) 				Prepends content to the inside of every matched element
+prependTo(selector)			Prepends all of the matched elements to another,specified set of elements 
+after(content)				Inserts content after each of the matched elements
+before(content)				Inserts content before each of the matched elements 
+insertAfter(selector)			Inserts all of the matched elements after another,specified set of elements
+insertBefore(selector)			Inserts all of the matched elements before another,specified set of elements
+
+
+WRAPPING,REPLACING,REMOVING CONTENT
+
+jQuery can warp the existing content in the page,replace content,copy content, and remove it
+
+FUNCTION 					PURPOSE
+wrap(html) 					Wraps each matched element with the specified HTML content 
+wrap(element)  				Wraps each matched element with the specified content         			
+wrapAll(html)				Wraps all the elements in the matched set with the specified HTML content	
+wrapAll(element)				Wraps all the elements in the matched set into a single wrapper element 
+wrapInner(html)				Wraps the inner child contents of each matched element (including text nodes) with  
+						 an HTML structure
+wrapInner(element)			Wraps the inner child contents of each matched element (including text nodes) with  
+						 an DOM structure
+replaceWith(content)			Replaces all matched elements with the specified HTML or DOM elements
+replaceAll(selector)			Replaces the elements matched by the specified selector with the matched elements
+empty()					Removes all child nodes from the set matched elements
+remove()					Removes all matched elements from the DOM 
+clone()					Clone matched DOM elements and selects the clones
+
+
+WORKING WITH CSS INFORMATION
+
+jQuery's CSS functions provide easy,cross-browser access for setting properties and working with positioning and sizing information 
+
+
+The css function allows you to retrieve and set CSS styles for a set matched elements
+
+
+FILTER					PURPOSE
+css(name)					Returns the value for the named CSS property for the first matched element
+css(properties)				Sets the CSS properties of every matched element Using an object-notation 
+						 syntax: 
+							var cssObj={
+							'background-color':'red'}
+							$(this).css(cssObj);
+css(property,value)			Sets a single style property to a value on all matched elements.If a number is 						 provided,it is automatically converted into a pixel value,with the following 						 exceptions: z-index,font-weight,opacity,zoom,and line-height  
+
+
+WORKING WITH CSS CLASSES 
+
+jQuery provides a set of functions for working with CSS clases on page elements 
+
+classes can be easily added,removed,toggled,and detected
+
+
+CSS FUNCTIONS				PURPOSE
+addClass(class)				Adds the specified class(es) to each of the set of matched elements
+hasClass(class)				Determine whether any of the matched elements are assigned the given class
+removeClass(class)			Remove a single class, multiple classes, or all classes from each element in the 						 set of matched elements
+toggleClass(class)			Add or remove one or more classes from each element in the set of matched elements, 						 depending on either the class's presence or the value of the switch argument
+
+
+WORKING WITH CSS POSITIONING
+
+The CSS positioning functions for provide cross-browser support for figuring out the positions of elements
+
+CSS FUNCTIONS				PURPOSE
+offset()					Get the current coordinates of the first element in the set of matched elements, 						 relative to the document
+offsetParent()				Get the closest ancestor element that is positioned
+position()					Get the current coordinates of the first element in the set of matched elements, 						 relative to the offset parent
+scrollTop()					Get the current vertical position of the scroll bar for the first element in the 						 set of matched elements
+scrollLeft()				Get the current horizontal position of the scroll bar for the first element in the 						 set of matched elements
+
+WORKING WITH CSS SIZING INFORMATION
+
+
+To retrieve cross-browser information for elements,use the jQuery size-related functions
+
+
+CSS FUNCTIONS				PURPOSE
+height()					Get the current computed height for the first element in the set of matched elements
+width()					Get the current computed width for the first element in the set of matched elements
+innerHeight()				Get the current computed height for the first element in the set of matched 						 elements, including padding but not border
+innerWidth()				Get the current computed width for the first element in the set of matched 						 elements, including padding but not border
+outerWidth()				Get the current computed width for the first element in the set of matched 						 elements, including padding and border	
+outerHeight()				Get the current computed height for the first element in the set of matched 						 elements, including padding, border, and optionally margin			
+
+
+ 
+
+
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

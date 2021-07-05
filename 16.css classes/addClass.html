@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>addClass &amp; removeClass</title>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+/*global selector*/
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.selected {
+	background-color: #FF0000;
+}
+.highlighted {
+	color: #0000FF;
+}
+.color {
+	color: #66CC00;
+}
+</style>
+</head>
+<body>
+<p>welcome to jQuery 0</p>
+<p class="color">welcome to jQuery 1</p>
+<p>welcome to jQuery 2</p>
+<script type="text/javascript">
+//$("p:first").addClass("selected highlighted");
+//$("p:last").addClass("selected highlighted");
+//$("p:last").addClass("selected");
+$("p").removeClass("color");
+</script>
+</body>
+</html>
